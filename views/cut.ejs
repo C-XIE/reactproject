@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提交表单</title>
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<% include includes/common.ejs %>
+	<style>
+	*{
+		padding:0px;
+		margin:0px;
+	}
+		#box{
+			width:660px;
+			height:380px;
+			/*border: 1px solid red;*/
+			overflow: hidden;
+			position: relative;
+		}
+		#picbox{
+			position: relative;
+		}
+		#black{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width:<%=width%>px;
+			height:<%=height%>px;
+			background: rgba(0,0,0,.5);
+			z-index: 2;
+		}
+		#cutSmallBox{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			/*border:1px solid red;*/
+			overflow: hidden;
+			z-index: 3;
+		}
+		#cutSmallBox #pic{
+			position: relative;
+		}
+		#cut{
+			height: 100%;
+			width: 180px;
+			/*border:1px solid red;*/
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+		#cut #big{
+			/*border: 1px solid red;*/
+			width: 160px;
+			height:160px;
+			margin-bottom: 10px;
+			overflow: hidden;
+		}
+		#cut #small{
+			/*border: 1px solid red;*/
+			width: 100px;
+			height:100px;
+			margin-bottom: 10px;
+			overflow: hidden;
+		}
+		#cut #middle{
+			/*border: 1px solid red;*/
+			width: 60px;
+			height:60px;
+			margin-bottom: 1px;
+			overflow: hidden;
+		}
+		#cut img{
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="picbox">
+			<img src="../uploads/<%=url%>" width="<%=width%>px" height="<%=height%>px">
+			<div id="black"></div>
+			<div id="cutSmallBox"><img src="../uploads/<%=url%>" width="<%=width%>" height="<%=height%>" id="pic"></div>
+		</div>
+
+		<div id="cut">
+			<div data-wh="160" id="big"><img src="../uploads/<%=url%>" width="<%=width%>px" height="<%=height%>px"></div>
+			<div data-wh="100" id="small"><img src="../uploads/<%=url%>" width="<%=width%>px" height="<%=height%>px"></div>
+			<div data-wh="60" id="middle"><img src="../uploads/<%=url%>" width="<%=width%>px" height="<%=height%>px"></div>
+			<button id="cutbtn">裁剪</button>
+		</div>
+	</div >
+<script src="js/cut.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录-问答平台</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<% include includes/common.ejs %>
+</head>
+<body>
+	<% include includes/nav.ejs %>
+	<!-- 内容 -->
+	<div class="container mt-4">
+		<h1>个人资料</h1>
+		<hr>
+		<div class="row mt-5">
+			<div class="col-lg-6">
+				<div class="form-group row mb-3">
+					<div class="col-sm-2 text-right">
+						邮箱
+					</div>
+					<div class="col-sm-10 p-0">
+						<input type="email" class="form-control" id="email" value="<%=email%>" disabled >
+					</div>
+				</div>
+				<div class="form-group row mb-3">
+					<div class="col-sm-2 text-right">
+						昵称
+					</div>
+					<div class="col-sm-10 p-0">
+						<input type="text" class="form-control" id="nickname">
+					</div>
+				</div>
+				<div class="form-group row mb-3">
+					<div class="col-sm-2 text-right">
+						简介
+					</div>
+					<div class="col-sm-10 p-0">
+						<input type="text" class="form-control" id="introduction">
+					</div>
+				</div>
+				<div class="form-group row mb-3">
+					<div class="col-sm-2 text-right">
+						头像
+					</div>
+					<div class="col-sm-10 p-0">
+						<img src="" id="avatar" width="100px">	
+						<button type="button"  data-toggle="modal" data-target=".bd-example-modal-lg">更改图片</button>
+
+						<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="needdiv">
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLabel">更改头像</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closebtn">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<iframe src="/form" frameborder="0" width="700" height="380" scrolling="no"></iframe>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row mb-3">
+					<div class="col-sm-2 text-right">
+						
+					</div>
+					<div class="col-sm-10 p-0">
+						<button type="button" class="btn btn-success" id="btnChange">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/info.js"></script>
+</body>
+</html>

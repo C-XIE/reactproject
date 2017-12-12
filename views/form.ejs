@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提交表单</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<% include includes/common.ejs %>
+	<style>
+		#addbtn{
+			width:250px;
+			height:250px;
+			background:black;
+			margin: 10px auto;
+		}
+		#addbtn p{
+			font-size: 200px;
+			text-align: center;
+			line-height: 200px;
+			color: yellow;
+		}
+		#exampleFormControlFile1{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<form action="/form" method="post" enctype="multipart/form-data" id="picform">
+		<div class="form-group">
+			<input type="file" class="form-control-file" id="exampleFormControlFile1" name="upload">
+		</div>
+	</form>
+	<div id="addbtn">
+		<p>+</p>
+	</div>
+	<script>
+		$("#addbtn").on("click",function(){
+			$("#exampleFormControlFile1").trigger("click");
+		});
+		$("#exampleFormControlFile1").on("change",function(event){
+			$("#picform").submit();
+		});
+	</script>
+</body>
+</html>

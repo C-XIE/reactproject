@@ -1,0 +1,53 @@
+.navonly{
+        z-index: 999;
+        width: 100%;
+        // height: 300px;
+        height: 53px;
+        position: fixed;
+        float: top;
+        // border-bottom: 1px solid rgb(89, 89, 212);
+        // background: white;
+        background: #92cb9a;
+        .navli{
+            list-style: none;
+            display: block;
+            // position: absolute;
+            top: 0;
+            width: 50%;
+            text-align: center;
+            // background: #615e5e;
+            margin: 0 auto;
+            height: 100%;
+            li{
+                float: left;
+                // line-height: 40px;
+                // background: red;
+                // margin: 10px 20px;
+                width: 20%;
+                font-size: 18px;
+                // margin: auto 0;
+                // padding: auto 0;
+
+                // background: red;
+                line-height: 52px;
+                &:hover{
+                    // background: rgb(146, 144, 144);
+                    // opacity: .5;
+                    font-size:23px;
+                    transition: all .2s linear 0s;
+                }
+                &.cur{
+                    background: #abcbff;
+                }
+                a{
+                    // color: rgb(219, 213, 213);
+                    color:#333;
+                    text-decoration: none;
+                    &:hover{
+                        // color:blue;
+                    }
+                }
+            }
+        }
+    }
+

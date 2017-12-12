@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页-问答平台</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<% include includes/common.ejs %>
+</head>
+<body>
+	<!-- 导航条 -->
+	<% include includes/nav.ejs %>
+	<!-- 内容 -->
+	<div class="container mt-4">
+		<h1>注册</h1>
+		<hr>
+		<div class="row mt-5">
+			<div class="col-lg-6">
+				<div class="form-group row mb-3">
+					<div class="col-sm-2 text-right">
+						<label for="exampleInputEmail1 ">输入邮箱</label>
+					</div>
+					<div class="col-sm-10 p-0">
+						<input type="email" class="form-control" id="email" >
+					</div>
+
+				</div>
+				<div class="form-group row mb-3">
+					<div class="col-sm-2 text-right">
+						<label for="exampleInputEmail1 ">输入密码</label>
+					</div>
+					<div class="col-sm-10 p-0">
+						<input type="password" class="form-control " id="password1" >
+						<div class="col-6 row mt-2 " id="strength" style="display:none">
+							<div class="col-3 p-1" data-color="red" >简单</div>
+							<div class="col-3 p-1" data-color="blue">一般</div>
+							<div class="col-3 p-1" data-color="yellow">复杂</div>
+							<div class="col-3 p-1" data-color="green">安全</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row mb-3">
+					<div class="col-sm-2 text-right">
+						<label for="exampleInputEmail1 ">重复密码</label>
+					</div>
+					<div class="col-sm-10 p-0">
+						<input type="password" class="form-control " id="password2" >
+					</div>
+				</div>
+				<div class="form-group row mb-3">
+					<div class="col-sm-2 text-right">
+					
+					</div>
+					<div class="col-sm-10 p-0">
+						<button type="submit" class="btn btn-primary" id="btn">提交</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<script src="js/regist.js"></script>
+</body>
+</html>
