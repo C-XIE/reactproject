@@ -10,5 +10,6 @@
 #### 运行方法
 #### npm install (或 cnpm install安装所有依赖)
 #### 开启mongoDB 数据库 
-#### node app.js 即可
+#### node .\app.js 即可
 #### 打开网页 3000端口查看
+#### 数据 可以使用 node .\mock.js 生成
