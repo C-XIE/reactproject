@@ -20,7 +20,6 @@ exports.getmessage = function(req,res){
     })
 };
 exports.addmessage = (req,res)=>{
-    console.log(req.session);
     var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
         let createobj = {
